@@ -8,22 +8,48 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <h1 id="title">Survey</h1>
-    <p id="Description">Thank you for taking the time to help us improve the platform</p>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
     <form id="survey-form">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Your name">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Your email">
-        <label for="age">Your age</label>
-        <input type="age" id="age" min="10" max="150" placeholder="Your age">
+        <div>
+        <label for="name" id="name-label">Your Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+        </div>
+        <div>
+        <label for="email" id="email-label">Your Email</label>
+        <input type="email" id="email" placeholder="Your email" required>
+        </div>
+        <div>
+        <label for="number" id="number-label">Your age</label>
+        <input type="number" id="number" min="10" max="150" placeholder="Your age">
+        </div>
+        <div>
+            <p>Would you recommend me to a friend?</p>
+            <label for=""><input type="radio" name="radio" value="def">Definitely</label>
+            <label for=""><input type="radio" name="radio" value="may">Maybe</label>
+            <label for=""><input type="radio" name="radio" value="not">Not Sure</label>
+        </div>
+        <div>
+            <label for="find">How did you find out about me?</label>
+            <select name="find" id="dropdown">
+                <option value="friends">Friends</option>
+                <option value="family">Family</option>
+                <option value="social">Social Media</option>
+                <option value="pamphlets">Pamphlets</option>
+            </select>
+        </div>
+        <div>
         <p>What would you like to see improved?</p>
-        <label for="fe"><input type="checkbox" id="fe">Front-end Projects</label>
-        <label for="be"><input type="checkbox" id="be">Back-end Projects</label>
-        <label for="dv"><input type="checkbox" id="dv">Data Visualisation</label>
-        <label for="suggestion">Do you have any suggestions or feedback?</label>
+        <label for="fe"><input type="checkbox" id="fe" value="Front">Front-end Projects</label>
+        <label for="be"><input type="checkbox" id="be" value="Back">Back-end Projects</label>
+        <label for="dv"><input type="checkbox" id="dv" value="Data">Data Visualisation</label>
+        </div>
+        <div>
+        <label for="suggestion">Do you have any somments or suggestions?</label>
         <textarea id="suggestion" cols="30" rows="10"></textarea>
-        <input type="submit" value="Submit">
+        </div> 
+        <input type="submit" value="Submit" id="submit">
     </form>
 </body>
 </html>
